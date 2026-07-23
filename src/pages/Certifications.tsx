@@ -74,9 +74,9 @@ export function Certifications() {
                     href={tech.pdfUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col h-full bg-white rounded-lg border border-border p-4 sm:p-6 shadow-sm hover:shadow-md transition-all duration-300"
+                    className="group flex flex-col h-full bg-white rounded-lg border border-border p-5 sm:p-6 shadow-sm hover:shadow-md transition-all duration-300"
                   >
-                    <div className={`w-14 h-14 sm:w-20 sm:h-20 mb-3 sm:mb-4 flex items-center justify-center rounded-lg ${tech.logoBg || 'bg-transparent'} p-1 sm:p-2 group-hover:scale-110 transition-transform`}>
+                    <div className={`w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 flex items-center justify-center rounded-xl ${tech.logoBg || 'bg-transparent'} p-2 group-hover:scale-110 transition-transform`}>
                       <img src={tech.logoUrl} alt={`${tech.name} logo`} className="w-full h-full object-contain" />
                     </div>
                     <div className="flex-grow">

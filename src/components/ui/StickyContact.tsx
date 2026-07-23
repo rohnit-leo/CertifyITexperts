@@ -1,42 +1,77 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Phone, MessageSquare } from 'lucide-react';
+import { Phone, MessageSquare, Send, Tag } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function StickyContact() {
+  const whatsappUrl = `https://wa.me/919121787171?text=${encodeURIComponent('Hello, I would like to speak with an expert.')}`;
+
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-      <motion.a
-        href="tel:+919121787171"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        className="w-14 h-14 bg-secondary rounded-full shadow-lg flex items-center justify-center text-white hover:bg-secondary/90 transition-colors relative group"
-        title="Call Us"
-      >
-        <span className="absolute right-full mr-4 bg-white text-primary text-sm font-bold py-1.5 px-3 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-          Call Now
-        </span>
-        <Phone className="w-6 h-6" />
-      </motion.a>
-      
-      <motion.a
-        href={`https://wa.me/919121787171?text=${encodeURIComponent('Hello, I would like to speak with an expert.')}`}
+    <motion.aside 
+      initial={{ x: -100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="fixed left-0 top-1/2 -translate-y-1/2 z-50 flex flex-col shadow-2xl rounded-r-2xl bg-primary/95 backdrop-blur-md border border-l-0 border-white/20 text-white overflow-hidden group/menu"
+      aria-label="Quick Actions Sticky Menu"
+    >
+      {/* WhatsApp Action */}
+      <a
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.1 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        className="w-14 h-14 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center text-white hover:bg-[#128C7E] transition-colors relative group"
-        title="WhatsApp Us"
+        className="flex items-center gap-3 px-3 py-3 bg-[#25D366] hover:bg-[#128C7E] text-white transition-all duration-300 border-b border-white/10 group"
+        title="WhatsApp Support"
       >
-        <span className="absolute right-full mr-4 bg-white text-primary text-sm font-bold py-1.5 px-3 rounded-lg shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+        <div className="w-8 h-8 flex items-center justify-center shrink-0">
+          <MessageSquare className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
+        </div>
+        <span className="text-xs font-bold whitespace-nowrap pr-2 hidden md:inline-block">
           WhatsApp Us
         </span>
-        <MessageSquare className="w-6 h-6" />
-      </motion.a>
-    </div>
+      </a>
+
+      {/* Call Action */}
+      <a
+        href="tel:+919121787171"
+        className="flex items-center gap-3 px-3 py-3 bg-secondary hover:bg-secondary/90 text-white transition-all duration-300 border-b border-white/10 group"
+        title="Call Us Now"
+      >
+        <div className="w-8 h-8 flex items-center justify-center shrink-0">
+          <Phone className="w-5 h-5 text-white group-hover:scale-110 transition-transform" />
+        </div>
+        <span className="text-xs font-bold whitespace-nowrap pr-2 hidden md:inline-block">
+          Call +91 91217 87171
+        </span>
+      </a>
+
+      {/* Quick Enquiry */}
+      <Link
+        to="/contact"
+        className="flex items-center gap-3 px-3 py-3 hover:bg-white/10 text-white transition-all duration-300 border-b border-white/10 group"
+        title="Quick Enquiry"
+      >
+        <div className="w-8 h-8 flex items-center justify-center shrink-0">
+          <Send className="w-4 h-4 text-secondary group-hover:scale-110 transition-transform" />
+        </div>
+        <span className="text-xs font-bold whitespace-nowrap pr-2 hidden md:inline-block">
+          Quick Enquiry
+        </span>
+      </Link>
+
+      {/* Discount Voucher */}
+      <Link
+        to="/voucher"
+        className="flex items-center gap-3 px-3 py-3 hover:bg-white/10 text-white transition-all duration-300 group"
+        title="Claim Voucher"
+      >
+        <div className="w-8 h-8 flex items-center justify-center shrink-0">
+          <Tag className="w-4 h-4 text-amber-400 group-hover:scale-110 transition-transform" />
+        </div>
+        <span className="text-xs font-bold whitespace-nowrap pr-2 hidden md:inline-block">
+          Get Voucher
+        </span>
+      </Link>
+    </motion.aside>
   );
 }
+

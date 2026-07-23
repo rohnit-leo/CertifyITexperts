@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Mail, MapPin, Phone } from 'lucide-react';
+import { ArrowRight, Mail, Phone, Facebook, Instagram } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -25,7 +25,7 @@ export function Footer() {
             <p className="text-white/70 mb-8 max-w-sm leading-relaxed">
               End-to-end expert guidance to help professionals worldwide conquer software and IT certifications with confidence. A decade of global excellence.
             </p>
-            <div className="flex flex-col gap-3 text-sm text-white/70">
+            <div className="flex flex-col gap-3 text-sm text-white/70 mb-6">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-secondary" />
                 <span>certifyitexperts@gmail.com</span>
@@ -35,7 +35,32 @@ export function Footer() {
                 <span>+91 91217 87171</span>
               </div>
             </div>
+
+            {/* Social Media Links */}
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.facebook.com/share/1M12qJdQrK/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-colors"
+                aria-label="Facebook Page"
+                title="Follow us on Facebook"
+              >
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/certifyitexperts?igsh=MTZ6ajhvYWd6bmc5Mw%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-secondary hover:text-white transition-colors"
+                aria-label="Instagram Page"
+                title="Follow us on Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
           </div>
+
 
           {/* Company Links */}
           <div>
