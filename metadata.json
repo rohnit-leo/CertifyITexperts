@@ -1,0 +1,6 @@
+{
+  "name": "Certify IT Experts",
+  "description": "Enterprise IT certification portal offering professional guidance and training.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
