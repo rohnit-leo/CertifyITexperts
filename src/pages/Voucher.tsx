@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Button } from '../components/ui/Button';
-import { Tag, CheckCircle2 } from 'lucide-react';
+import { Tag, CheckCircle2, AlertCircle, Globe, Calendar } from 'lucide-react';
 
 export function Voucher() {
   return (
@@ -15,10 +15,24 @@ export function Voucher() {
             </p>
           </div>
 
+          {/* Availability & Validity Info Box */}
+          <div className="max-w-4xl mx-auto mb-8 bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 text-primary flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-600 shrink-0">
+              <AlertCircle className="w-5 h-5" />
+            </div>
+            <div className="text-sm leading-relaxed">
+              <p className="font-bold text-amber-900 mb-1">Important Voucher Notice</p>
+              <p className="text-slate-700">
+                Certification discount vouchers are subject to availability. Please check with us to check availability. 
+                Features include a <strong>remote extended validity period</strong>, and <strong>all certification discount vouchers are valid globally worldwide</strong>.
+              </p>
+            </div>
+          </div>
+
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl mx-auto bg-white rounded-lg border border-border shadow-sm overflow-hidden flex flex-col md:flex-row relative"
+            className="max-w-4xl mx-auto bg-white rounded-xl border border-border shadow-sm overflow-hidden flex flex-col md:flex-row relative"
           >
             {/* Decorative dashed line for voucher feel */}
             <div className="hidden md:block absolute left-[35%] top-0 bottom-0 w-px border-l-2 border-dashed border-border/50"></div>
@@ -44,10 +58,10 @@ export function Voucher() {
               <h2 className="text-3xl font-bold text-primary mb-6">Global IT Certification Vouchers</h2>
               <ul className="space-y-4 mb-8">
                 {[
-                  'Valid for Pearson VUE, PSI, and Kryterion',
-                  'Applicable for AWS, Microsoft, Cisco, CompTIA & more',
-                  'Extended validity period up to 12 months',
-                  'Instant delivery upon approval'
+                  'Valid for Pearson VUE, PSI, Kryterion & online proctored exams',
+                  'Applicable for AWS, Microsoft, Salesforce, ServiceNow, CompTIA, Cisco & more',
+                  'All certification discount vouchers valid globally worldwide',
+                  'Remote extended validity period available upon request'
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
@@ -59,9 +73,9 @@ export function Voucher() {
                 <Button 
                   size="lg" 
                   className="w-full sm:w-auto" 
-                  href={`https://wa.me/919121787171?text=${encodeURIComponent('Hello, I would like to request an IT Certification discount voucher.')}`}
+                  href={`https://wa.me/919121787171?text=${encodeURIComponent('Hello, I would like to check for discount voucher availability.')}`}
                 >
-                  Claim Discount Voucher
+                  Check for discount voucher availability
                 </Button>
               </div>
             </div>

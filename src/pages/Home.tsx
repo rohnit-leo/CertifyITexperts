@@ -135,7 +135,7 @@ export function Home() {
                   Get Certified Today
                 </Button>
                 <Button variant="outlineWhite" size="lg" href="/why-us">
-                  Success Stories
+                  Why Choose Us
                 </Button>
               </div>
             </motion.div>
@@ -399,77 +399,6 @@ export function Home() {
         </div>
       </section>
       
-      {/* Testimonials */}
-      <section className="py-24 bg-white border-t border-border overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Success Stories</h2>
-            <p className="text-lg text-text-muted">
-              Hear from professionals who accelerated their careers with our enterprise certification programs.
-            </p>
-          </div>
-          
-          <div className="flex overflow-hidden relative w-full -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8">
-            <div className="flex whitespace-nowrap animate-scroll hover:[animation-play-state:paused] gap-8">
-              {[...Array(2)].map((_, arrayIdx) => (
-                <React.Fragment key={arrayIdx}>
-                  {[
-                    {
-                      name: "Sarah Jenkins",
-                      role: "Senior Cloud Architect",
-                      company: "TechNova Solutions",
-                      content: "The AWS Solutions Architect Professional certification seemed daunting, but the structured guidance and 100% assurance gave me the confidence I needed to pass on my first attempt.",
-                      rating: 5
-                    },
-                    {
-                      name: "Michael Chen",
-                      role: "Lead Security Analyst",
-                      company: "Global Cyber Defense",
-                      content: "Their CISSP preparation is unmatched. The expert mentors identified my weak areas and focused my studies exactly where it mattered. Highly recommended for senior security professionals.",
-                      rating: 5
-                    },
-                    {
-                      name: "David Rodriguez",
-                      role: "IT Infrastructure Manager",
-                      company: "Enterprise Dynamics",
-                      content: "We partnered with Certify IT Experts to upskill our entire infrastructure team on Azure. The results were phenomenal, with a 100% pass rate across 15 team members.",
-                      rating: 5
-                    },
-                    {
-                      name: "Emily Watson",
-                      role: "DevOps Engineer",
-                      company: "InnovateTech",
-                      content: "The Kubernetes certification path was incredible. The hands-on labs and dedicated support made the difference between passing and failing.",
-                      rating: 5
-                    }
-                  ].map((testimonial, idx) => (
-                    <div key={`${arrayIdx}-${idx}`} className="bg-surface p-8 rounded-lg border border-border shadow-sm flex flex-col w-[350px] md:w-[450px] shrink-0 whitespace-normal">
-                      <div className="flex gap-1 mb-6">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <svg key={i} className="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        ))}
-                      </div>
-                      <p className="text-text-muted italic mb-8 flex-grow">"{testimonial.content}"</p>
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg shrink-0">
-                          {testimonial.name.charAt(0)}
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-primary">{testimonial.name}</h4>
-                          <p className="text-xs text-text-muted">{testimonial.role} at {testimonial.company}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* How It Works */}
       <section className="py-24 bg-surface border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -481,7 +410,6 @@ export function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-            {/* Connecting line */}
             <div className="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-border z-0"></div>
             
             {[
@@ -521,7 +449,7 @@ export function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Frequently Asked Questions</h2>
             <p className="text-lg text-text-muted">
-              Everything you need to know about our enterprise certification preparation and 100% assurance guarantee.
+              Everything you need to know about our enterprise certification preparation, discount vouchers, and 100% assurance guarantee.
             </p>
           </div>
           
@@ -532,12 +460,8 @@ export function Home() {
                 a: "Our assurance program guarantees that if you follow our structured preparation path and fail the exam, we will cover the cost of your retake and provide additional 1-on-1 mentoring until you pass."
               },
               {
-                q: "How long does a typical certification path take?",
-                a: "Depending on the complexity of the certification and your prior experience, most professional paths take between 6 to 12 weeks of dedicated preparation."
-              },
-              {
-                q: "Do you offer corporate or team training?",
-                a: "Yes, we specialize in enterprise training. We can upskill entire departments with customized learning paths, dedicated mentors, and bulk licensing discounts."
+                q: "Are discount vouchers valid worldwide?",
+                a: "Yes! All certification discount vouchers are valid globally worldwide across Pearson VUE, PSI, Kryterion, and online proctored test centers with extended remote validity."
               },
               {
                 q: "Are the study materials updated for the latest exam versions?",
@@ -570,36 +494,6 @@ export function Home() {
             <Button variant="outlineWhite" size="lg" href={`https://wa.me/919121787171?text=${encodeURIComponent('Hello, I would like to speak with an expert.')}`}>
               Speak with an Expert
             </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Process Section */}
-      <section className="py-24 bg-surface border-t border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Your Path to Certification</h2>
-            <p className="text-lg text-text-muted">
-              A streamlined, hassle-free process designed to get you certified quickly and efficiently, without the stress.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            <div className="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-border -z-10"></div>
-            
-            {[
-              { step: "01", title: "Consultation", desc: "Connect with our experts to discuss your career goals and select the right certification path." },
-              { step: "02", title: "Preparation", desc: "Receive targeted guidance, resources, and 100% assurance support tailored to your exam." },
-              { step: "03", title: "Certification", desc: "Pass your exam with confidence and receive your official enterprise-grade IT certification." }
-            ].map((item, idx) => (
-              <div key={idx} className="bg-white p-8 rounded-xl shadow-sm border border-border text-center relative z-10 group hover:-translate-y-1 transition-transform duration-300">
-                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6 shadow-md group-hover:scale-110 transition-transform">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-4">{item.title}</h3>
-                <p className="text-text-muted">{item.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
