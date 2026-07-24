@@ -45,7 +45,7 @@ export function Header() {
             <img 
               src="https://a8cw5fshupvoh5ik.public.blob.vercel-storage.com/IMG_2785.PNG" 
               alt="Certify IT Experts Logo" 
-              className="w-14 h-14 object-contain group-hover:scale-105 transition-transform"
+              className="w-16 h-16 object-contain scale-110 group-hover:scale-125 transition-transform"
             />
             <span className="text-xl md:text-2xl tracking-tight text-white">
               <span className="font-extrabold">Certify</span> <span className="font-light text-white/90">IT Experts</span>
