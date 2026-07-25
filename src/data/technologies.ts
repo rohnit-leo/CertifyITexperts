@@ -50,6 +50,14 @@ export const TECHNOLOGIES: Technology[] = [
     pdfUrl: 'https://a8cw5fshupvoh5ik.public.blob.vercel-storage.com/certificationpdf/ServiceNow_Pearson_VUE_Certifications_2026.pdf'
   },
   {
+    id: 'google-cloud',
+    name: 'Google Cloud',
+    category: 'Cloud, DevOps & Infrastructure',
+    description: 'Google Cloud Platform (GCP) enterprise cloud and infrastructure certifications.',
+    logoUrl: 'https://a8cw5fshupvoh5ik.public.blob.vercel-storage.com/WhatsApp%20Image%202026-07-25%20at%2012.01.04%20PM.jpeg',
+    pdfUrl: 'https://a8cw5fshupvoh5ik.public.blob.vercel-storage.com/google_cloud_certification_exams_2026.pdf'
+  },
+  {
     id: 'ec-council',
     name: 'EC-Council',
     category: 'Cybersecurity & Networking',
