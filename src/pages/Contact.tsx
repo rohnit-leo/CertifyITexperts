@@ -117,7 +117,7 @@ export function Contact() {
                     </div>
                     <div>
                       <p className="font-semibold text-primary mb-1">Phone</p>
-                      <p className="text-text-muted">+91 91217 87171<br/>Available 24/5 Mon-Fri</p>
+                      <p className="text-text-muted">+91 91217 87171<br/>Available 24/7 (Monday to Sunday)</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -125,8 +125,8 @@ export function Contact() {
                       <Clock className="w-6 h-6" />
                     </div>
                     <div>
-                      <p className="font-semibold text-primary mb-1">Office Hours</p>
-                      <p className="text-text-muted">Monday - Friday<br/>9:00 AM - 6:00 PM (PST)</p>
+                      <p className="font-semibold text-primary mb-1">Availability</p>
+                      <p className="text-text-muted">24/7 Monday to Sunday</p>
                     </div>
                   </div>
                 </div>

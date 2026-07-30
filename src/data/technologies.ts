@@ -202,5 +202,21 @@ export const TECHNOLOGIES: Technology[] = [
     description: 'Cloud security and zero trust network access.',
     logoUrl: 'https://a8cw5fshupvoh5ik.public.blob.vercel-storage.com/logos/Zscaler_idz0j5A6bB_1.png',
     pdfUrl: 'https://a8cw5fshupvoh5ik.public.blob.vercel-storage.com/certificationpdf/zscaler_certification_directory_2026.pdf'
+  },
+  {
+    id: 'snowflake',
+    name: 'Snowflake',
+    category: 'Cloud, DevOps & Infrastructure',
+    description: 'Data cloud platform, data engineering, and analytics certifications.',
+    logoUrl: 'https://frevuykpcqueimke.public.blob.vercel-storage.com/WhatsApp%20Image%202026-07-26%20at%207.51.31%20PM.jpeg',
+    pdfUrl: 'https://frevuykpcqueimke.public.blob.vercel-storage.com/Snowflake_Certifications_PearsonVUE_2026.pdf'
+  },
+  {
+    id: 'splunk',
+    name: 'Splunk',
+    category: 'Cybersecurity & Networking',
+    description: 'SIEM, log analytics, security operations, and observability certifications.',
+    logoUrl: 'https://frevuykpcqueimke.public.blob.vercel-storage.com/WhatsApp%20Image%202026-07-26%20at%207.51.31%20PM%20%281%29.jpeg',
+    pdfUrl: 'https://frevuykpcqueimke.public.blob.vercel-storage.com/splunk_certification_exams_2026.pdf'
   }
 ];
